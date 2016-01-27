@@ -43,4 +43,4 @@ have to comment out some calculations attempted (on non-existant orbitals) in
 get_J.m
 
 
-Compare examples/ethylene_b3lyp with Figure 1 in JACS 2006 128 9882-9886
+Compare examples/ethylene_b3lyp with Figure 1 in JACS 2006 128 9882-9886 http://dx.doi.org/10.1021/ja061827h
