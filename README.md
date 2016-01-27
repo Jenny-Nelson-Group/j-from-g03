@@ -22,13 +22,13 @@ Adapted from code by J.Kirkpatrick to deal with GAMESS-UK output; joejk2 12/09/0
 	
 	3. pair of molecules (e.g. xxx_pair.com)
 	
-	N.B.Typical input: 
-	` # b3lyp nosymm punch=mo iop(3/33=1) `
-		nosymm necessary to prevent reorientation of molecule to standard orientation.
-		punch=mo puts orbital coefficients in fort.7.  This must be
-		moved to xxx_x.pun 
-		iop(3/33=1) forces output of the overlap matrix in the
-		xxx_x.log file
+	N.B. Typical Gaussian input line: 
+	```
+# b3lyp nosymm punch=mo iop(3/33=1)
+	nosymm necessary to prevent reorientation of molecule to standard orientation.
+	punch=mo puts orbital coefficients in fort.7.  This must be moved to xxx_x.pun 
+	iop(3/33=1) forces output of the overlap matrix in the xxx_x.log file
+	```
 
 3. Run 'rewrite_S_Phi_E.x' with the prefix to gaussian calculation (1), (2)
 and (3) !! IN THIS ORDER !!.  This program expects to find 3 log files and 3 pun files.
