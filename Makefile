@@ -1,8 +1,7 @@
-
 cc=g++
-options= -o3
+options= -O3
 
 all: rewrite_S_phi_E.cpp components.h
-	${cc} ${options} rewrite_S_phi_E.cpp -o ~/bin/rewrite_S_phi_E.x 
-	cp -f get_J.m ~/bin
+	${cc} ${options} rewrite_S_phi_E.cpp -o rewrite_S_phi_E.x 
+
 
