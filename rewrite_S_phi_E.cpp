@@ -32,10 +32,15 @@ int main(int argc, char * argv [])
     //mon2.normaliseMOs();
     pair.readS(argv[3]);
     pair.readMOs(argv[3]);
-    if (mon1.Nbasis!=mon2.Nbasis || pair.Nbasis!=2*mon1.Nbasis) {
-	cerr << "***Error***: Unexpected basis sets\n";
-	return (-2);
+
+    if (mon1.Nbasis!=mon2.Nbasis ) {
+	cerr << "***WARNING***: Mismatched basis set size for molecula A vs. molecule B. \n";
+//	return (-2);
     }
+    if (pair.Nbasis!=mon1.Nbasis+mon2.Nbasis) {
+        cerr << "***WARNING**: The size of the pair basis is not the sum of molecule A + molecule B. This is almost certainly an error. Check your Gaussian jobs! \n";
+    }
+
     if(!ZINDO) {
 	//pair.normaliseMOs();
 	mon1.justPrintS("S_1.txt");
