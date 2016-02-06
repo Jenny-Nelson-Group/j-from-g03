@@ -2,12 +2,14 @@
 #include <cmath>
 #include <iomanip>
 
+#include <cstdlib> // Additions to compile cleanly in 2016...
+#include <cstring>
+
 #include "components.h"
 #define ZINDO 0
 #define HOMO_mon 23 //Counting from zero!
 
 using namespace std;
-
 
 int main(int argc, char * argv [])
 {
